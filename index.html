@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Учебный сайт об XML и XML-словарях в Web-разработке.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>XML в Web — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html" aria-current="page">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+<section class="hero"><div class="row"><div class="col-8"><p class="hero-kicker">Учебный справочник</p><h1>XML и XML-словари в Web</h1><p class="p-heading--4">От базового синтаксиса до XPath, XSLT, пространств имён и сравнения с JSON.</p><div class="hero-actions"><a class="p-button--positive" href="syntax.html">Начать изучение</a><a class="p-button" href="examples.html">Открыть практику</a></div></div></div></section>
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / XML в Web</div>
+<h1 class="page-title">XML в современной Web-разработке</h1><p class="lead">XML (Extensible Markup Language) — расширяемый язык разметки для представления структурированных данных в текстовом, человекочитаемом и машиночитаемом виде.</p>
+<div class="callout"><strong>Главная идея:</strong> XML не задаёт фиксированный набор тегов. Разработчик или стандарт определяет собственный словарь элементов и правил их использования.</div>
+<h2>Где встречается XML</h2><div class="topic-grid"><section class="topic-card"><span class="badge">Web</span><h3>SVG</h3><p>Векторная графика в браузере описывается XML-элементами: фигурами, группами, путями и атрибутами.</p></section><section class="topic-card"><span class="badge">Данные</span><h3>RSS и Atom</h3><p>Форматы синдикации используют XML для передачи заголовков, ссылок, дат и описаний публикаций.</p></section><section class="topic-card"><span class="badge">Документы</span><h3>Office-форматы</h3><p>Многие современные офисные форматы представляют собой архивы с XML-файлами, описывающими структуру документа.</p></section></div>
+<h2>Пример простого XML</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;book id=&quot;b1&quot;&gt;
+  &lt;title&gt;Введение в XML&lt;/title&gt;
+  &lt;author&gt;Иван Петров&lt;/author&gt;
+  &lt;year&gt;2026&lt;/year&gt;
+&lt;/book&gt;</code></pre></div>
+<figure class="figure"><picture><source media="(max-width: 767px)" srcset="images/xml-tree-480.webp"><source media="(max-width: 1199px)" srcset="images/xml-tree-800.webp"><img src="images/xml-tree-1200.webp" srcset="images/xml-tree-480.webp 480w, images/xml-tree-800.webp 800w, images/xml-tree-1200.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 70vw, 800px" alt="Древовидная структура XML-документа: catalog, book, title и author" title="Пример дерева XML" width="1200" height="640"></picture><figcaption>XML-документ естественно представляется в виде дерева вложенных элементов.</figcaption></figure>
+<h2>Что изучаем на сайте</h2><ol><li>Синтаксис и понятие well-formed документа.</li><li>DTD и XSD как средства задания структуры.</li><li>Пространства имён XML.</li><li>Популярные XML-словари.</li><li>XPath и XSLT.</li><li>Сравнение XML и JSON.</li></ol></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html" aria-current="page">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

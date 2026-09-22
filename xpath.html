@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Основы XPath и примеры выбора узлов XML.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>XPath — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html" aria-current="page">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / XPath</div><h1 class="page-title">XPath</h1><p class="lead">XPath — язык выражений для выбора узлов и вычисления значений в XML-дереве. Он широко используется вместе с XSLT и другими XML-технологиями.</p>
+<h2>Исходный документ</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;catalog&gt;
+  &lt;book id=&quot;b1&quot;&gt;&lt;title&gt;XML&lt;/title&gt;&lt;price&gt;900&lt;/price&gt;&lt;/book&gt;
+  &lt;book id=&quot;b2&quot;&gt;&lt;title&gt;Web&lt;/title&gt;&lt;price&gt;1200&lt;/price&gt;&lt;/book&gt;
+&lt;/catalog&gt;</code></pre></div>
+<h2>Примеры выражений</h2><div class="table-scroll"><table><caption>Базовые XPath-выражения</caption><thead><tr><th>XPath</th><th>Результат</th></tr></thead><tbody><tr><td><code>/catalog/book</code></td><td>Все элементы book непосредственно внутри catalog</td></tr><tr><td><code>//title</code></td><td>Все title независимо от глубины</td></tr><tr><td><code>//book[@id='b2']</code></td><td>Книга с атрибутом id=b2</td></tr><tr><td><code>//book[price &gt; 1000]</code></td><td>Книги с ценой выше 1000</td></tr><tr><td><code>count(//book)</code></td><td>Количество книг</td></tr></tbody></table></div>
+<h2>Контекстный узел</h2><p>XPath вычисляется относительно контекста. Поэтому относительный путь <code>title</code> внутри текущего <code>book</code> означает дочерний элемент title именно этой книги.</p></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html" aria-current="page">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

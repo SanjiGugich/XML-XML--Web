@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<catalog>
+  <book id="b1">
+    <title>Введение в XML</title>
+    <author>Иван Петров</author>
+    <year>2026</year>
+  </book>
+  <book id="b2">
+    <title>Web-технологии</title>
+    <author>Анна Соколова</author>
+    <year>2025</year>
+  </book>
+</catalog>

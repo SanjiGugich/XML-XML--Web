@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Основы XSLT и преобразование XML в HTML.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>XSLT — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html" aria-current="page">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / XSLT</div><h1 class="page-title">XSLT</h1><p class="lead">XSLT — язык преобразований XML. Он использует XPath для выбора узлов и шаблоны для построения нового результата.</p>
+<figure class="figure"><img src="images/xml-flow.svg" alt="Схема: XML и XSLT передаются XSLT-процессору, результатом становится HTML" title="Преобразование XML через XSLT"><figcaption>Типовая схема преобразования XML-документа в HTML.</figcaption></figure>
+<h2>Пример шаблона</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;xsl:template match=&quot;/&quot;&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+      &lt;ul&gt;
+        &lt;xsl:for-each select=&quot;catalog/book&quot;&gt;
+          &lt;li&gt;&lt;xsl:value-of select=&quot;title&quot;/&gt;&lt;/li&gt;
+        &lt;/xsl:for-each&gt;
+      &lt;/ul&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+&lt;/xsl:template&gt;</code></pre></div>
+<p>В папке <code>examples</code> проекта находятся связанные файлы <a href="examples/books.xml">books.xml</a> и <a href="examples/books.xsl">books.xsl</a>.</p>
+<h2>Где полезен XSLT</h2><ul><li>Преобразование XML в HTML для публикации.</li><li>Перестройка XML одного формата в другой.</li><li>Фильтрация и сортировка элементов.</li><li>Генерация текстовых представлений.</li></ul></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html" aria-current="page">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

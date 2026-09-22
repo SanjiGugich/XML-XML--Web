@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Пространства имён XML и использование xmlns.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>Пространства имён — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html" aria-current="page">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / Пространства имён</div><h1 class="page-title">Пространства имён XML</h1><p class="lead">Namespaces решают проблему совпадающих имён элементов, когда в одном документе используются разные XML-словари.</p>
+<h2>Конфликт имён</h2><p>Элемент <code>table</code> может означать HTML-таблицу или, например, предмет мебели в прикладном словаре. Пространства имён позволяют различить эти значения.</p>
+<h2>Пример с префиксами</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;root
+  xmlns:h=&quot;http://www.w3.org/1999/xhtml&quot;
+  xmlns:f=&quot;https://example.org/furniture&quot;&gt;
+  &lt;h:table&gt;
+    &lt;h:tr&gt;&lt;h:td&gt;Ячейка&lt;/h:td&gt;&lt;/h:tr&gt;
+  &lt;/h:table&gt;
+  &lt;f:table&gt;
+    &lt;f:material&gt;wood&lt;/f:material&gt;
+  &lt;/f:table&gt;
+&lt;/root&gt;</code></pre></div>
+<div class="callout"><strong>Важно:</strong> URI пространства имён служит идентификатором. Он не обязан открываться в браузере как обычная Web-страница.</div>
+<h2>Пространство имён по умолчанию</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot;/&gt;
+&lt;/svg&gt;</code></pre></div></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html" aria-current="page">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

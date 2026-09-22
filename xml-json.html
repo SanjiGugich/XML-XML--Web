@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сравнение форматов XML и JSON.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>XML и JSON — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html" aria-current="page">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / XML и JSON</div><h1 class="page-title">XML и JSON</h1><p class="lead">XML и JSON решают похожую задачу передачи структурированных данных, но используют разные модели записи и имеют разные сильные стороны.</p>
+<div class="table-scroll"><table><caption>Сравнение XML и JSON</caption><thead><tr><th>Критерий</th><th>XML</th><th>JSON</th></tr></thead><tbody><tr><td>Основная модель</td><td>Дерево элементов и атрибутов</td><td>Объекты, массивы и значения</td></tr><tr><td>Комментарии</td><td>Поддерживаются</td><td>Стандарт JSON комментарии не определяет</td></tr><tr><td>Namespaces</td><td>Есть стандартный механизм</td><td>Нет встроенного аналога</td></tr><tr><td>Схемы</td><td>DTD, XSD и другие</td><td>JSON Schema</td></tr><tr><td>Смешанное содержимое</td><td>Удобно для документной разметки</td><td>Обычно менее естественно</td></tr><tr><td>Типичный API Web</td><td>Встречается, особенно в legacy/SOAP</td><td>Очень распространён в REST API</td></tr></tbody></table></div>
+<h2>Одинаковые данные</h2><div class="topic-grid"><section class="topic-card"><h3>XML</h3><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;user&gt;
+  &lt;name&gt;Alex&lt;/name&gt;
+  &lt;skills&gt;
+    &lt;skill&gt;HTML&lt;/skill&gt;
+    &lt;skill&gt;CSS&lt;/skill&gt;
+  &lt;/skills&gt;
+&lt;/user&gt;</code></pre></div></section><section class="topic-card"><h3>JSON</h3><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>{
+  &quot;name&quot;: &quot;Alex&quot;,
+  &quot;skills&quot;: [&quot;HTML&quot;, &quot;CSS&quot;]
+}</code></pre></div></section></div>
+<div class="callout"><strong>Выбор формата зависит от задачи:</strong> JSON часто удобнее для API и JavaScript, а XML особенно силён там, где важны namespaces, схемы, документная структура и развитая экосистема XML-инструментов.</div></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html" aria-current="page">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

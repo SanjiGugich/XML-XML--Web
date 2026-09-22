@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Основные правила синтаксиса XML, элементы, атрибуты и корректная вложенность.">
+  <meta name="author" content="Полин Александр Русланович">
+  <title>Синтаксис XML — XML в Web</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla_framework_version_4.59.0.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">XML</span><span>XML в Web</span></a><button class="p-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button><nav id="main-nav" class="main-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html" aria-current="page">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></nav></div></header>
+
+<div class="page-wrap"><div class="content-layout"><main id="main"><article class="content-card"><div class="breadcrumbs"><a href="index.html">Главная</a> / Синтаксис XML</div><h1 class="page-title">Синтаксис XML</h1><p class="lead">XML использует элементы, атрибуты и строгую вложенность. Документ должен быть синтаксически корректным (well-formed).</p>
+<h2>Основные правила</h2><ul><li>В документе должен быть ровно один корневой элемент.</li><li>Каждый открывающий тег должен быть корректно закрыт.</li><li>Элементы нельзя перекрёстно вкладывать.</li><li>Имена тегов чувствительны к регистру.</li><li>Значения атрибутов заключаются в кавычки.</li></ul>
+<h2>Корректный пример</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;student id=&quot;101&quot;&gt;
+  &lt;name&gt;Александр&lt;/name&gt;
+  &lt;group&gt;ИСиТ&lt;/group&gt;
+&lt;/student&gt;</code></pre></div>
+<h2>Некорректный пример</h2><div class="code-block"><button class="p-button copy-btn" type="button">Копировать</button><pre><code>&lt;student&gt;
+  &lt;name&gt;Александр
+  &lt;group&gt;ИСиТ&lt;/name&gt;
+&lt;/student&gt;</code></pre></div>
+<div class="callout"><strong>Почему ошибка:</strong> элемент <code>name</code> не закрыт перед началом <code>group</code>, а закрывающие теги нарушают вложенность.</div>
+<h2>Специальные символы</h2><div class="table-scroll"><table><caption>XML-сущности</caption><thead><tr><th>Символ</th><th>Запись</th><th>Назначение</th></tr></thead><tbody><tr><td>&lt;</td><td><code>&amp;lt;</code></td><td>Знак «меньше» в тексте</td></tr><tr><td>&gt;</td><td><code>&amp;gt;</code></td><td>Знак «больше»</td></tr><tr><td>&amp;</td><td><code>&amp;amp;</code></td><td>Амперсанд</td></tr><tr><td>&quot;</td><td><code>&amp;quot;</code></td><td>Двойная кавычка</td></tr></tbody></table></div></article></main><aside aria-label="Дополнительная навигация"><div class="aside-sticky"><section class="side-card"><h2 class="p-heading--5">Разделы сайта</h2><ul class="side-nav"><li><a href="index.html">Главная</a></li>
+<li><a href="syntax.html" aria-current="page">Синтаксис</a></li>
+<li><a href="structure.html">Структура</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+<li><a href="vocabularies.html">Словари</a></li>
+<li><a href="xpath.html">XPath</a></li>
+<li><a href="xslt.html">XSLT</a></li>
+<li><a href="xml-json.html">XML/JSON</a></li>
+<li><a href="examples.html">Практика</a></li></ul></section><section class="side-card"><h2 class="p-heading--5">Полезно помнить</h2><p>XML описывает структуру данных, а не их внешний вид. Для оформления и преобразований применяются отдельные технологии.</p></section></div></aside></div></div>
+<footer class="site-footer"><div class="footer-inner"><div><strong>XML в Web</strong><p class="muted-light">Учебный проект по дисциплине Web-разработка. Автор: Полин Александр Русланович.</p></div><div><ul class="footer-links"><li><a href="https://www.w3.org/XML/" target="_blank" rel="noopener">W3C XML</a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/XML" target="_blank" rel="noopener">MDN XML</a></li><li><a href="https://vanillaframework.io/" target="_blank" rel="noopener">Vanilla Framework</a></li></ul><p class="muted-light">© 2026</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
